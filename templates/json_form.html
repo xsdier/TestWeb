@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>json工具</title>
+</head>
+<body>
+   <!--  <form action="/jsonget" method="post">
+    	{% csrf_token %}
+        
+        <input type="submit" value="搜索">
+    </form>
+ -->    <form action="/jsonget" method="post">
+    	{% csrf_token %}
+    	<textarea rows="1" cols="100" type="text" name="id" placeholder="公主级金币章节，或者物品id或者type，套装id"></textarea><br>
+        <textarea rows="1" cols="100" type="text" name="num" placeholder="公主级掉落章节，物品数量"></textarea><br>
+        <textarea rows="1" cols="100" type="text" name="actime" placeholder="活动时间"></textarea><br>
+        <textarea rows="1" cols="100" type="text" name="price" placeholder="如果需要，填写价格"></textarea><br>
+        <textarea rows="1" cols="100" type="text" name="suitid" placeholder="如果需要，套装id"></textarea><br>
+        <input type="submit" name="button" value="公主级双倍">
+        <input type="submit" name="button" value="登陆送">
+        <input type="submit" name="button" value="累充">
+        <input type="submit" name="button" value="大喵指引">
+        <input type="submit" name="button" value="大额复刻">
+        <input type="submit" name="button" value="累计消耗">
+        <input type="submit" name="button" value="签到送">
+    </form>
+    <p>{{ rlt|safe }}</p>
+</body>
+</html>
